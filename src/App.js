@@ -5,15 +5,20 @@ import styled from 'styled-components';
 
 
 const AppDiv = styled.div`
-  min-height: 1800px;
+  background-color: #313642;
+  height: 95vh;
+  margin: 30px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 30px 4px rgba(0,0,0,0.8);
+  font-family: 'Rubik', sans-serif;
 `;
 
 
 function App() {
   return (
-    <AppDiv >
-      <Form />
-      <TaskList />
+    <AppDiv className='background-image'>
+        <Form />
+        {/* <TaskList /> */}
     </AppDiv>
   );
 }

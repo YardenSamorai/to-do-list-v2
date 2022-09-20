@@ -4,8 +4,7 @@ import DoneIcon from '../assests/DoneIcon.png'
 import styled from 'styled-components';
 
 const Item = styled.div`
-width: 50%;
-float:right;
+
 `;
 
 const Text = styled.div`
@@ -23,14 +22,24 @@ width: 100rem;
 
 
 const DivWrapper = styled.div`
-position: relative;
 display: flex;
 border: 2px solid black;
 margin: 0 815px 0 0;
 width: 725px;
 justify-content: space-between;
-left: 30%;
 margin: 10px; 
+
+&:hover {
+  box-shadow: 0px 0px 15px -1px rgba(29, 144, 244, 0.5);
+  transition: box-shadow 0.2s ease-in-out;
+}
+`;
+
+const OnHoverImg = styled.img`
+&:hover {
+  box-shadow: 0px 0px 15px -1px rgba(29, 144, 244, 0.5);
+  transition: box-shadow 0.2s ease-in-out;
+}
 `;
 
 
@@ -39,7 +48,8 @@ width: 50%;
 float: left;
 text-align: center;
 font-size: 35px;
-color: red;
+color: #1D90F4;
+text-decoration: line-through;
 `;
 
 const IconWrapper = styled.div`
@@ -50,9 +60,10 @@ display:flex;
 
 const DivDate = styled.div`
 font-size: 19px;
-position: relative;
+position: flex;
 right: 100px;
 top: 15px;
+height: 30px
 `;
 
 
@@ -69,7 +80,7 @@ const TaskItem = ({ task, setListTask, list }) => {
   }
 
   return (
-    <DivWrapper>
+    <DivWrapper className='divWrapper'>
 
       {color ? <TextFalse>{task.text}</TextFalse> : <Text>{task.text}</Text>}
       <DivDate>{task.date}</DivDate>

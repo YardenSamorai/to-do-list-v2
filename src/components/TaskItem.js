@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import DeleteIcon from '../assests/DeleteIcon.png';
 import DoneIcon from '../assests/DoneIcon.png'
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 const Item = styled.div`
 
@@ -69,6 +70,7 @@ height: 30px
 
 const TaskItem = ({ task, setListTask, list }) => {
   const [color, setColor] = useState(task.isFinish);
+  const [nextPage, setNextPage] = useState(false);
 
   const onClickDelete = () => {
     setListTask(list.filter(item => item.id !== task.id));
@@ -79,10 +81,17 @@ const TaskItem = ({ task, setListTask, list }) => {
     task.isFinish = !task.isFinish;
   }
 
+  // const NextPage = () => {
+  //   setNextPage(true);
+  // }
+
+  const relevantPath = `taskpage/${task.id}`;
+
   return (
+
     <DivWrapper className='divWrapper'>
 
-      {color ? <TextFalse>{task.text}</TextFalse> : <Text>{task.text}</Text>}
+      {color ? <TextFalse >{task.text}</TextFalse> : <Text>{task.text}</Text>}
       <DivDate>{task.date}</DivDate>
       <IconWrapper>
         <img src={DeleteIcon} onClick={onClickDelete} />
@@ -90,6 +99,7 @@ const TaskItem = ({ task, setListTask, list }) => {
 
       </IconWrapper>
     </DivWrapper>
+
   )
 }
 

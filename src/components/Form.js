@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 
 
-
 const FirstTitle = styled.h1`
 text-align: center;
 font-size: 65px;
@@ -65,7 +64,6 @@ align-items: center;
 const Form = () => {
     const [myinput, setInput] = useState("");
     const [Clicked, setClicked] = useState(false);
-    const [nextPage, setNextPage] = useState(false);
 
 
     const inputHandler = (e) => {
@@ -78,14 +76,9 @@ const Form = () => {
         setClicked(true);
     }
 
-    const onClickMovePage = () => {
-        setNextPage(true);
-    }
-
     return (
-        
+
         <FormWrapper className='form-wrapper'>
-            
             <FirstTitle> Yarden's Todo-List </FirstTitle>
             <DivInput className='Add-new-item'>
                 <InputText onChange={inputHandler} className="input-item" type="text" placeholder="Please enter Task"></InputText>

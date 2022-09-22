@@ -2,6 +2,9 @@ import './App.css';
 import Form from './components/Form';
 import TaskList from './components/TaskList';
 import styled from 'styled-components';
+import { BrowserRouter, useRoutes } from "react-router-dom";
+import TaskPage from './components/TaskPage';
+
 
 
 const AppDiv = styled.div`
@@ -15,10 +18,23 @@ const AppDiv = styled.div`
 
 
 function App() {
+  const RoutesMap = () => {
+    return useRoutes([
+      {
+        path: "",
+        element: <Form />
+      },
+      {
+        path: 'taskpage/:id',
+        element: <TaskPage />
+      }
+    ])
+  }
+
   return (
     <AppDiv className='background-image'>
-        <Form />
-        {/* <TaskList /> */}
+      <Form />
+
     </AppDiv>
   );
 }

@@ -28,9 +28,9 @@ const TaskList = ({ myInput, IsClicked, setClicked }) => {
             setClicked(false);
             SetCounter(counter + 1);
         }
-    }, [IsClicked, listTask]);
+    }, [IsClicked]);
 
-
+console.log(listTask);
     if (listTask.length) {
         return (
             <List className='List-wrapper'>

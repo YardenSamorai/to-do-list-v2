@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import TaskList from './TaskList';
 import styled from 'styled-components';
 
-
-
-
 const FirstTitle = styled.h1`
 text-align: center;
 font-size: 65px;
@@ -12,11 +9,6 @@ margin: 0px;
 padding: 70px;
 font-family: 'Rubik', sans-serif;
 color: #1D90F4;
-`;
-
-const DivInput = styled.div`
-
-
 `;
 
 const InputText = styled.input`

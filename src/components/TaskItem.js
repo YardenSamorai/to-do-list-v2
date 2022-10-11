@@ -81,9 +81,6 @@ const TaskItem = ({ task, setListTask, list }) => {
     task.isFinish = !task.isFinish;
   }
 
-  // const NextPage = () => {
-  //   setNextPage(true);
-  // }
 
   const relevantPath = `taskpage/${task.id}`;
 

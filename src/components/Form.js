@@ -72,10 +72,10 @@ const Form = () => {
 
         <FormWrapper className='form-wrapper'>
             <FirstTitle> Yarden's Todo-List </FirstTitle>
-            <DivInput className='Add-new-item'>
+            <div className='Add-new-item'>
                 <InputText onChange={inputHandler} className="input-item" type="text" placeholder="Please enter Task"></InputText>
                 <BtnSubmit onClick={submitHandler} className="btn-submitTask">Submit</BtnSubmit>
-            </DivInput>
+            </div>
             <TaskList myInput={myinput} IsClicked={Clicked} setClicked={setClicked} />
         </FormWrapper>
     )
